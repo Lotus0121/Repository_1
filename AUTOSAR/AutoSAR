@@ -1,11 +1,11 @@
-添加文件夹
-汽车开放系统架构
-ECU 
-一、Mode Management
-1.BSW Managemnet
+在Github中添加文件夹：Trunk/文件夹/文件 （左下滑线）
+汽车开放系统架构 Auto Opening System Architecture
+ECU 电控单元
+一、Mode Management 模式管理
+1.BSW Managemnet 模式切换
 启动|关机
 
-2.ECU Management
+2.ECU Management 状态
 
 二、CAN NM 网络管理CanNM
 独立于硬件的协议，只能在CAN上使用。切换运行/睡眠模式。
