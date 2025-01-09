@@ -6,6 +6,9 @@ ECU 电控单元
 启动|关机
 
 2.ECU Management 状态
+EcuPartition：核0、核1
+EcuM唤醒源（CDS Pin）;pin脚名称
+唤醒类型：CAN中断、LIN、DIL、DIH
 
 二、CAN NM 网络管理CanNM
 独立于硬件的协议，只能在CAN上使用。切换运行/睡眠模式。
