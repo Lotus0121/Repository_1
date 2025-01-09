@@ -7,7 +7,7 @@
 	open DPA文件
 	input files update
 	不选中Error pdur 在Communication->PDUs->PDUs->Mod9ules->CanIf->CanIfTxPduCfgs中勾选Full CAN
-	validate生成
+	validate验证 Generate生成
 3.eclipse
 	F5更新 release编译
 	Beyand Compare对比
