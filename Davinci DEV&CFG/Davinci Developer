@@ -1,3 +1,7 @@
 一、导出arxml文件
 在svn更新前，首先update svn上最新配置，然后将Developer目录：...Appl_AUTOSAR\Vector\Config\Developer下
 的文件通过svn Locks-Lock锁住，编辑完之后上传svn同时通过svn Locks-Unlock"
+
+二、在Developer中添加Port
+1.Dataing mapping 进行通信接口的数据映射在Config中生成Callback函数
+2.Software Design-fx Port Access
