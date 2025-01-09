@@ -1,5 +1,9 @@
+一、UDS 统一诊断服务14229-1
 Service ID | 诊断服务名 | sub-function |
-10|         |Diagnostic Session Control 诊断会话控制|01默认会话、02编程会话、03扩展会话
-11    | ECU Reset ECU复位    | 01硬件复位   
-27  | Security Acess 安全访问   | 
-28  | Communication Control通信控制   | 
+10|Diagnostic Session Control 诊断会话控制|01默认会话、02编程会话、03扩展会话
+11| ECU Reset ECU复位    | 01硬件复位   
+27| Security Acess 安全访问   | 
+28| Communication Control通信控制   | 
+3E|Tester Present待机控制|
+14|Clear Diagnotic Information清楚诊断信|
+19|Read DTC Information读取故障码信息|
