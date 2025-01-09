@@ -1,0 +1,28 @@
+1.Edit DBC file
+	Signal->message
+	不勾选诊断Yes
+	配置周期，CFG中手动配置
+	脚本生成arxml文件移到DBs下
+2.DaVinci CFG
+	open DPA文件
+	input files update
+	不选中Error pdur 在Communication->PDUs->PDUs->Mod9ules->CanIf->CanIfTxPduCfgs中勾选Full CAN
+	validate生成
+3.eclipse
+	F5更新 release编译
+	Beyand Compare对比
+4.WinIDEA
+	点开WinIDEA workspace文件
+	*Hardware->Debugger Hardware->Communication->Test绿
+	*Hardware->Emulation options->Program Files->.hex
+	*Debug->configure session->Application->App->Symbol Files->.elf
+	路径Target -release (.elf/.hex)
+	Download run
+5.PCAN-view
+   看报文
+6.SVN
+	Commit
+	.dbc和.arxml和DPA文件
+	source .h .c
+
+
