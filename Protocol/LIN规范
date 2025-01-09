@@ -1,4 +1,4 @@
-Local Interconnect Network 本地互联网
+---Local Interconnect Network 本地互联网
 LIN Configuration Language（*.ldf）
 功能简单，实时性低，成本低。
 串行通信节省面积，单线传输，最高速率20Kbit/s,单主多重结构无需仲裁，基于通用URAT/SCI的低成本接口硬件（MCU具有LIN总线的硬件基础）
