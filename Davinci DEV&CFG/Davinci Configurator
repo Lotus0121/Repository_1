@@ -1,4 +1,8 @@
-1.Edit DBC file
+一、Basic Editor-Com-ComConfig-ComSignals-Signal Access-ACCESS_NEEDED_BY_SWC_OR_COM
+  生成代码，FUNC(Std_ReturnType,RTE_CODE) RTE_Read_COMCBK_SignalName();//信号读取回调函数 接口 函数declaration、call。
+  接口原型 函数Definition
+
+1.Edit DBC file 
 	Signal->message
 	不勾选诊断Yes
 	配置周期，CFG中手动配置
