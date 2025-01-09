@@ -1,1 +1,21 @@
 添加文件夹
+汽车开放系统架构
+ECU 
+一、Mode Management
+1.BSW Managemnet
+启动|关机
+
+2.ECU Management
+
+二、CAN NM 网络管理CanNM
+独立于硬件的协议，只能在CAN上使用。切换运行/睡眠模式。
+使ECU节点有序唤醒和睡眠 省电
+厂家在设计时规定好NM报文的ID范围0xXXX-0xXXX
+8字节：ECU地址/ID（基础值+ECU的ID）、Control Bit Vector(Bit0\0\0\0\主动唤醒位(0被动唤醒、远程唤醒，1主动唤醒、本地唤醒)\0\0\0\)、User Data 0（自定义）、1、2、3、4、5、6、7
+1字节（Byte）=8比特（Bit）
+CANoe抓取报文
+NM三种状态：睡眠、预睡眠、网络模式（重复报文、正常工作、准备睡眠状态）
+状态机-图 3+3
+
+三、CAN
+Can模块 CanIf模块
