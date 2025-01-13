@@ -1,9 +1,12 @@
 J1 J2 J3 J4 J5 J6
 PIN名字 接口类型 负载类型 电流 
-Pin Configuration/Assignment
+Pin引脚 Configuration/Assignment
 Pin Definitions and Functions
 PIN Symbol Function
+1 GND Ground
 https://github.com/Lotus0121/Repository1/edit/main/Hareware/IO%20Definition/
+![图片描述](相对路径/图片文件名)
+![图片描述](images/ScreenShot.png)
 
 一、SBC System Basis Chip 英飞凌Infineon TLE9263
 Body Control Modules (BMC)
