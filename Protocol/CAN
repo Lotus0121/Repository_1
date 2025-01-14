@@ -1,3 +1,5 @@
-一、Controler Area Network 控制器局域网
+一、Controler Area Network 控制器局域网 是一种串行通信协议。电子控制系统之间的通信。
+CAN控制器根据两根线（CAN_H、CAN_L）的电位差来判断总线电平(显性电平、隐形电平)。发送方通过总线电平的的变化将消息传递给接受方。
+
 CAN Specification规范
 CAN Channel
