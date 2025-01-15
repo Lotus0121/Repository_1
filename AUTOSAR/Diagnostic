@@ -1,6 +1,5 @@
 一、UDS 统一诊断服务ISO14229-1 OBD(On Board Diagnostic)
 DTC故障诊断码
-
 Service ID | 诊断服务名 | sub-function |
 10|Diagnostic Session Control 诊断会话控制|01默认会话、02编程会话、03扩展会话
 11| ECU Reset ECU复位    | 01硬件复位   
@@ -9,3 +8,14 @@ Service ID | 诊断服务名 | sub-function |
 3E|Tester Present待机控制|
 14|Clear Diagnotic Information清楚诊断信|
 19|Read DTC Information读取故障码信息|
+
+二、CDD诊断描述文件
+0x27安全访问在DIAGCBK
+DEV：Service port添加接口-新建函数
+
+三、CANoe DLL文件
+
+
+
+
+
