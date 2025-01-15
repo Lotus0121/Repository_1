@@ -5,3 +5,33 @@ EMC电磁兼容性
 CAN Specification规范
 
 ~.bat脚本将~.xlsm自动生成代码
+
+二、在已有DBC的基础上添加CAN收发信号
+1.Add new CAN receive message
+	Message Name：报文帧名；
+  Signal Name：信号名；
+  Message ID：报文ID；
+	Message Type：报文类型（事件帧E/周期帧P）；
+	Signal Type：信号类型（事件帧E/周期帧P）；
+	DLC：报文帧的长度（标准为8）；
+	Size：信号长度
+	Msb Lsb：信号的起始地址与结束地址；
+	Byte Order：Motorola（大端模式），Intel（小端模式）；
+	Default initi value:	信号初始值
+	Coding:	信号取值范围与解释，也叫环境变量取值范围
+新建：Table->Signal->Message->Network nodes
+2.将DBC文件导入DaVinci CFG,生成代码
+Input Files->Open~|Update~
+在CanIf中引用
+3.RTE Mapping
+在DEV里新建接口：Application Port Interfaces-右键新建S/R
+软件设计-选中双击-New
+4.CFG里ECU Software Components-ECU Composition-Data mapping
+Port Prototype->Map Communication Elements
+
+三、总线掉线Bus Off
+在CAPL中添加~.can测试
+
+
+
+
