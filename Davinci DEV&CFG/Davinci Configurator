@@ -27,4 +27,4 @@
 6.SVN
 	Commit
 	.dbc和.arxml和DPA文件
-	source .h .c
+	\source ~.h ~.c ~.arxml
