@@ -10,43 +10,37 @@ Service ID | 诊断服务名 | sub-function |
 19|Read DTC Information读取故障码信息|
 
 二、CDD诊断描述文件
-0x27安全访问
+0x27安全访问（诊断-Dcm）
 步骤一：启用安全访问
 Basic Software：SecOC、CSM
 
 步骤 二：配置 0x27 服务
 在 Dcm 模块中找到 Supported Diagnostic Services 配置表
 添加 0x27（Security Access）服务：
-Identifier (SID): 0x27
-Sub-functions: 根据需求配置子功能，例如：
-0x01 - 请求种子 (Seed Request)
-0x02 - 提供密钥 (Key Response)
+Service ID(SID): 0x27　
+Sub-function: 根据需求配置子功能，例如：0x01 - 请求种子 (Seed Request)、0x02 - 提供密钥 (Key Response)
 Permission Levels: 设置每个子功能的权限等级（例如，DiagnosticSessionControl 中定义的会话）。
 Timeout: 配置服务的响应超时时间
 
 步骤 三：配置安全种子和密钥算法
-如果需要自定义算法，配置相关的种子生成和密钥验证逻辑：
-导航到 Csm 或相关加密服务模块。
-确保算法库（例如 AES、SHA）被正确导入并启用。
-在 ECU 的 Application Layer 或 Security Module 中实现密钥校验逻辑。
-输入种子 -> 生成密钥 -> 验证密钥。
+如果需要自定义算法，配置相关的种子生成和密钥验证逻辑
+Csm 或相关加密服务模块
+确保算法库（例如 AES、SHA）被正确导入并启用
+在 ECU 的 Application Layer 或 Security Module 中实现密钥校验逻辑
+输入种子 -> 生成密钥 -> 验证密钥
 
 步骤 四：映射 RTE 和 PDU
-确保 Security Access 的 PDU 信号被正确配置和映射到 Dcm。
-校验 RTE 是否提供了支持通信的函数。
+确保 Security Access 的 PDU 信号被正确配置和映射到 Dcm
+校验 RTE 是否提供了支持通信的函数
 
 步骤 五：生成代码并验证
-点击 Generate Code。
-检查生成的代码中：
-Dcm 配置文件是否包括 0x27 服务。
-Security Access 的算法逻辑是否被正确生成。
-上传至 ECU，使用诊断工具（如 CANoe 或 UDS Studio）测试：
-发送 0x27 SID 请求。
-校验 ECU 返回种子和密钥是否正确工作。
-DEV：Service port添加接口-新建函数
+点击 Generate，上传至 ECU，使用诊断工具（如 CANoe 或 UDS Studio）测试
+发送 0x27 SID 请求，校验 ECU 返回种子和密钥是否正确工作。
 
-三、CANoe DLL文件
+DaVinci DEV：Service port添加接口-新建函数
 
+三、CANoe DLL文件（动态链接库）~.dll
+GenerateSeed()种子生成)0x01　VerifyKey()密钥算法验证0x02
 
 
 
