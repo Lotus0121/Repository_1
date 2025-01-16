@@ -1,3 +1,5 @@
+Vector的开发包CBDXXXXXXX SIP 基于不同的MCU和编译器
+路径：devtools>Vector_SoftwarePackage>CBDXXXXXXX>DaVinci Configurator>Core>DaVinciCFG.exe
 一、Basic Editor-Com-ComConfig-ComSignals-Signal Access-ACCESS_NEEDED_BY_SWC_OR_COM
   生成代码，FUNC(Std_ReturnType,RTE_CODE) RTE_Read_COMCBK_SignalName();//信号读取回调函数 接口 函数declaration、call。
   接口原型 函数Definition
