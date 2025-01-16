@@ -1,0 +1,35 @@
+一、CodeFlash
+1.FBL地址分配：0x10000000-0x10107FFF
+FBL_ADDR_START=0x10000000
+FBL_ADDE_END=0x10107FFF
+CRC校验4Byte，在0x1000CFFB-0x1000CFFF 由编译文件决定，依赖性校验。
+FBL_CRC_FIX_ADDR=0x1000CFFC
+
+2.APPL地址分配：0x10108000-0x1020FFFF
+*CodeFlash_HeaderPartten:0x10108000-0x101083FF 校验FBL与APP中的内容是一致的(一致性校验)
+CodeFlash_APPL:0x10108400 – 0x1020FFEF，其中后4个Byte用于存储APPL代码的CRC值(CRC校验)
+*CodeFlash_FooterPartten:0x1020FFF0 – 0x1020FFFF，共16个Byte，用于验证FBL与APPL是否一致，(一致性校验)
+Application software valid flag start and end address:0x1020FFF8-0x1020FFFF
+
+3.vLinkGen 编译链接文件 ~.icf
+在CFG->Project Settings->Modules->"+"->Select from SIP中添加vBaseEnv和vLinkGen两个模块
+vBaseEnv根据芯片的内存情况设置 Cypress
+预留出2KB RAM用于Startup 的栈空间 Start_Stack
+在OS Configuration中设置核的启动，在KBCM平台，从OS->OsCores->_Kostal_start启动                                           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
