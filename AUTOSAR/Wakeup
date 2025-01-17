@@ -1,7 +1,7 @@
 一、FlowChart流程图
 Off->/PowerOn/->StartUp->Run->Shutdown->/PowerOff/->Off
-Wakeup-PreSleep-Sleep
-
+Wakeup->PreSleep->Sleep
+指从休眠状态切换到正常运行状态
 
 
 二、State Diagram
