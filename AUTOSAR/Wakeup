@@ -1,6 +1,7 @@
-Product Name：Stellantis_~_~
+Product Name：Stellantis_~_~ 不同的项目不同的SBC型号(TLE9262)
 MCU：Cypress ~
-Platform：Vector Autosar
+Platform：Vector Autosar 依赖硬件的模块(Mcal OS CAN LIN) Vector开发包CBDXXXXXXX
+
 一、FlowChart流程图
 Off->/PowerOn/->StartUp->Run->Shutdown->/PowerOff/->Off
 Wakeup->PreSleep->Sleep
