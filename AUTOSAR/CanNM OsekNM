@@ -1,0 +1,12 @@
+一、删除CanNm,添加OsekNM
+Projecting Setting->Modules->CanNM->OsekNM
+CanSM配置BusOff beginirc End
+删除默认生成的NmStandardBusNmConfig Container
+增加NmGenerocBusNmConfig
+创建NmOsekChannelConfig
+
+
+
+
+
+
