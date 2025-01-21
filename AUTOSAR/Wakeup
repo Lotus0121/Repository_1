@@ -1,3 +1,6 @@
+Product Name：Stellantis_~_~
+MCU：Cypress ~
+Platform：Vector Autosar
 一、FlowChart流程图
 Off->/PowerOn/->StartUp->Run->Shutdown->/PowerOff/->Off
 Wakeup->PreSleep->Sleep
