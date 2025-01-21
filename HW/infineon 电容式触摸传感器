@@ -1,3 +1,4 @@
 一、infineon 英飞凌科技股份有限公司 德国 慕尼黑 MCU设计指南
 Cypress 赛普拉斯半导体公司
 Capacitive touch sensor 电容式触摸传感器
+结构：Csensor->Cover+Sensor->Circut->微控制器ADC/GPIO->Software
