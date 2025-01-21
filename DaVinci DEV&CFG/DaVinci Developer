@@ -5,3 +5,6 @@
 二、在Developer中添加Port
 1.Dataing mapping 进行通信接口的数据映射在Config中生成Callback函数
 2.Software Design-fx Port Access
+
+三、Data Mapping
+注意Developer、Configurator、external component版本对应关系
