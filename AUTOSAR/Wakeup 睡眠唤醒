@@ -13,3 +13,4 @@ Wakeup->PreSleep->Sleep
 二、State Diagram 状态机
 
 三、Condition->逻辑表达式->Davinci CFG：容器Rule->ActionList->Actions（函数）
+IGN指Ignition点火
