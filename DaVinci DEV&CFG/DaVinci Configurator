@@ -1,9 +1,9 @@
 ……快捷打开方式：~.dpa->右键->DaVinci ProjectAssistant->Configure BSW/Configure SWCs
-需要设置~.dpa文件的SIP路径->以notepad++打开更改<SIP软件集成包>———绝对路径/相对路径———<SIP>属性
+需要设置~.dpa文件的SIP路径->以notepad++打开更改<SIP>———绝对路径/相对路径———<SIP>属性
 
 在新建工程时指定代码的生成路径；先添加Resource,后添加Mcu模块
 
-Vector的开发包CBDXXXXXXX SIP 基于不同的MCU和编译器
+Vector的开发包CBDXXXXXXX SIP(软件集成包) 基于不同的MCU和编译器
 路径：devtools>Vector_SoftwarePackage>CBDXXXXXXX>DaVinci Configurator>Core>DaVinciCFG.exe
 一、Basic Editor-Com-ComConfig-ComSignals-Signal Access-ACCESS_NEEDED_BY_SWC_OR_COM
   生成代码，FUNC(Std_ReturnType,RTE_CODE) RTE_Read_COMCBK_SignalName();//信号读取回调函数 接口 函数declaration、call。
