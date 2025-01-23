@@ -1,4 +1,5 @@
-Product Name：Stellantis_~_~ 不同的项目不同的SBC型号(调试TLE9262)用SPI通信
+Product Name：Stellantis_~_~ 
+不同的项目不同的SBC型号(调试TLE9262)用SPI通信
 MCU：Cypress ~
 Platform：Vector Autosar,依赖硬件的模块(Mcal OS CAN LIN),Vector开发包Vector MICROSAR(CBD1900832)
 
