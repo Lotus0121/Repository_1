@@ -3,11 +3,12 @@ MCU：Cypress ~
 Platform：Vector Autosar,依赖硬件的模块(Mcal OS CAN LIN),Vector开发包Vector MICROSAR(CBD1900832)
 
 一、FlowChart流程图
-Off->/PowerOn/->StartUp->Run->Shutdown->/PowerOff/->Off
+通过BswM状态来实现整体EcuM_State的睡眠状态 使能EcuMFlexGeneral->EcuMModeHandling，EcuMState的状态相关Rules和Actionlists
+状态切换时的Action：Off->/PowerOn/->StartUp->Run->Shutdown->/PowerOff/->Off
 Wakeup->PreSleep->Sleep
 指从休眠状态切换到正常运行状态
+网络唤醒源(CAN|LIN)|硬件唤醒源()
 
-
-二、State Diagram
+二、State Diagram 状态机
 
 三、Condition->逻辑表达式->Davinci CFG：容器Rule->ActionList->Actions（函数）
