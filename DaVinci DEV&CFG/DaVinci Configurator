@@ -1,5 +1,5 @@
 ……快捷打开方式：~.dpa->右键->DaVinci ProjectAssistant->Configure BSW/Configure SWCs
-需要设置~.dpa文件的SIP路径->以notepad++打开更改<SIP>———绝对路径/相对路径———<SIP>属性
+需要设置~.dpa文件的SIP路径->以notepad++打开更改<SIP软件集成包>———绝对路径/相对路径———<SIP>属性
 
 在新建工程时指定代码的生成路径；先添加Resource,后添加Mcu模块
 
