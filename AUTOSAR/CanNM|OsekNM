@@ -12,10 +12,20 @@ CanSM配置BusOff beginirc End
 2.Project Setting->勾选CanTrcv并配置
 3.CanIf
 
-四、
+四、代码
 1.	EcuM_CheckWakeup()
 2.	EcuM_StartWakeupSources()
 3.	EcuM_StopWakeupSources()
 4.	EcuM_CheckValidation()
 
-
+五、
+1. NM网络管理 是AUTOSAR架构中用于确保车辆内多个ECU（Electronic Control Unit）之间通信高效运行的模块                                                                  
+管理网络节点的唤醒、休眠、和保持网络活跃状态
+网络唤醒WakeUp(发送唤醒信号唤醒整个网络)
+网络同步Syn (确保所有节点同步进入活动状态或休眠状态，以避免通信冲突)
+网络保持awake (节点 通过 发送 周期性的NM消息 告诉 其他节点 其 仍然活跃(某些节点 需要 长时间通信)保持 网络 处于活动状态)
+休眠管理
+模块
+   NM
+   CANNM LINNM FlexRayNM EthernetNM
+   ECUM(管理ECU的电源状态) 关机-唤醒-正常运行-休眠-关机
