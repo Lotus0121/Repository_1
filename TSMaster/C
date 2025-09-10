@@ -1,1 +1,35 @@
-ACAN->FData[0]==0x71
+？访问CAN报文信息 字节0~7  _数据长度_ _服务ID_ _子ID_ _xx_ _xx_ _参数_ _参数_ _参数_
+    ACAN->FData[0]==0x71 
+
+分析->报文发送->[1]CAN/CAN FD发送->添加新的原始报文->复制为C代码
+
+一、涉及通过诊断通信（如UDS）“发送应答报文”方式进行ECU钥匙学习，这属于汽车电子领域的“协议级钥匙匹配”或“脚本化匹配”，特别常见于PEPS、IMMO、BCM等ECU的开发、测试
+  车辆ECU学习钥匙时，标准的钥匙学习流程是通过诊断命令（如UDS的RoutineControl、WriteDataByIdentifier等）让ECU在运行时，按规则把新钥匙的ID/ADC/序列码登记进合法钥匙列表。
+1.诊断会话切换
+    10 03
+2.安全访问
+    27 01
+    27 03
+3.例程控制 钥匙学习指令
+    31 01
+    或者2E服务通过ID写数据，6E
+4.验证钥匙学习成功
+    22 xx xx查询已学钥匙列表，应答帧中出现新钥匙ID
+
+
+  主动组包并发送钥匙学习相关的诊断服务ID（SID）、安全接入、数据写入等原始帧，实现钥匙ID注册入ECU的过程。
+
+Fob(汽车遥控钥匙)、防盗PIN码、IMMOImmobilizer系统，发动机防盗，通常与钥匙内芯片配对
+
+5.VIN：【车辆识别码】（Vehicle Identification Number）
+    17字节的VIN作为参数。 31 01 DF 07 参数 
+PEPS(Passive Entry Passive Start) ECU模块(无钥匙进入与启动系统): 需要学习并存储唯一的车辆识别号（VIN）
+
+6.ADC：Additional Device Code 外部配件的唯一标识 如【钥匙编号】。表示这个ADC号码已被写入、登记或绑定到PEPS（无钥匙进入一键启动控制器）模块
+
+配新钥匙(ECU学习钥匙)：ECU通过特定流程将待学习钥匙的唯一芯片ID(如DF07)存储进数据库，写入ECU EEPROM存储区，完成配对。
+
+[总线数据长度] [服务ID] [RoutineControlType] [RoutineIdentifier_H] [RoutineIdentifier_L] [参数1] [参数2] [...] 
+
+
+
